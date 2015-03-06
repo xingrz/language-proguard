@@ -1,0 +1,10 @@
+{
+  "name": "language-proguard",
+  "version": "0.1.0",
+  "description": "Atom language support for ProGuard configuration",
+  "repository": "https://github.com/xingrz/language-proguard",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  }
+}

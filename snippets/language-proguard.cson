@@ -1,0 +1,70 @@
+'.source.proguard':
+  'abstract':
+    'prefix': 'ab'
+    'body': 'abstract '
+  'class':
+    'prefix': 'cl'
+    'body': 'class '
+  'interface':
+    'prefix': 'in'
+    'body': 'interface '
+  'private':
+    'prefix': 'pr'
+    'body': 'private '
+  'protected':
+    'prefix': 'po'
+    'body': 'protected '
+  'public':
+    'prefix': 'pu'
+    'body': 'public '
+  'static':
+    'prefix': 'st'
+    'body': 'static '
+  'synchronized':
+    'prefix': 'sy'
+    'body': 'synchronized '
+  'include':
+    'prefix': '-inc'
+    'body': '-include ${1:file}'
+  'basedir':
+    'prefix': '-b'
+    'body': '-basedirectory ${1:directory}'
+  'injars':
+    'prefix': '-inj'
+    'body': '-injars ${1:class_path}'
+  'outjars':
+    'prefix': '-outj'
+    'body': '-outjars ${1:class_path}'
+  'libjars':
+    'prefix': '-libj'
+    'body': '-libraryjars ${1:class_path}'
+  'target':
+    'prefix': '-tar'
+    'body': '-target ${1:version}'
+  'keep':
+    'prefix': '-k'
+    'body': '-keep ${1:class *} {\n\t$2\n}'
+  'keepclassmembers':
+    'prefix': '-km'
+    'body': '-keepclassmembers ${1:class *} {\n\t$2\n}'
+  'keepclasseswithmembers':
+    'prefix': '-kwm'
+    'body': '-keepclasseswithmembers ${1:class *} {\n\t$2\n}'
+  'keepnames':
+    'prefix': '-kn'
+    'body': '-keepnames ${1:class *} {\n\t$2\n}'
+  'keepclassmembernames':
+    'prefix': '-kmn'
+    'body': '-keepclassmembernames ${1:class *} {\n\t$2\n}'
+  'keepclasseswithmembernames':
+    'prefix': '-kwmn'
+    'body': '-keepclasseswithmembernames ${1:class *} {\n\t$2\n}'
+  'keeppackagenames':
+    'prefix': '-kpack'
+    'body': '-keeppackagenames '
+  'keepattributes':
+    'prefix': '-katt'
+    'body': '-keepattributes '
+  'keepparameternames':
+    'prefix': '-kpar'
+    'body': '-keepparameternames'

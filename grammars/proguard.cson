@@ -1,0 +1,75 @@
+name: 'ProGuard Configuration'
+scopeName: 'source.proguard'
+fileTypes: [
+  'cfg'
+  'pro'
+  'proguard-rules.txt'
+  'proguard-project.txt'
+  'proguard-android.txt'
+  'proguard-android-optimize.txt'
+]
+patterns: [
+  {
+    include: '#comment'
+  }
+  {
+    include: '#class'
+  }
+  {
+    include: '#modifier'
+  }
+  {
+    match: '^\-[^ ]+'
+    name: 'keyword.proguard'
+  }
+  {
+    begin: '{'
+    beginCaptures:
+      '0':
+        name: 'punctuation.section.block.begin.proguard'
+    end: '}'
+    endCaptures:
+      '0':
+        name: 'punctuation.section.block.end.proguard'
+    patterns: [
+      {
+        include: '#comment'
+      }
+      {
+        include: '#modifier'
+      }
+    ]
+  }
+]
+repository:
+  class:
+    patterns: [
+      {
+        match: '\\b(class|interface|enum)\\b'
+        captures:
+          '1':
+            name: 'keyword.class.proguard'
+      }
+      {
+        match: '\\b(extends|implements)\\b'
+        captures:
+          '1':
+            name: 'keyword.inherits.proguard'
+      }
+    ]
+  modifier:
+    patterns: [
+      {
+        match: '\\b(public|private|protected|final|static|native|abstract|volatile|synchronized|transient)\\b'
+        captures:
+          '1':
+            name: 'keyword.modifier.proguard'
+      }
+    ]
+  comment:
+    patterns: [
+      {
+        match: '\#.*$'
+        name: 'comment.line.number-sign.proguard'
+      }
+    ]
